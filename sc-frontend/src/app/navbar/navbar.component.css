@@ -1,0 +1,14 @@
+nav {
+    background-color: #232f3e;
+    padding: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a:hover {
+    background-color: violet;
+}
