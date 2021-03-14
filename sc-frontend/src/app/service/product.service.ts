@@ -71,4 +71,17 @@ export class ProductService {
   findAll(): Product[] {
     return this.products;
   }
+
+  // find(id: string): Product {
+  //   return this.products[this.getSelectedIndex(id)];
+  // }
+
+  // private getSelectedIndex(id: string) {
+  //   for (var i = 0; i < this.products.length; i++) {
+  //     if (this.products[i].id == id) {
+  //       return i;
+  //     }
+  //   }
+  //   return -1;
+  // }
 }

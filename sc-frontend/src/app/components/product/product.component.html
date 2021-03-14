@@ -11,7 +11,7 @@
             <div class="card-body">
                 <h4 class="card-title">{{product.name}}</h4>
                 <p class="card-text">{{product.description}}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a [routerLink]="['/cart', { id:product.id }]">Add to Cart</a>
             </div>
         </div>
     </div>
