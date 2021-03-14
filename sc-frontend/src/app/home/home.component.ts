@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  productCollection = [
+  products = [
     {
       id: 1,
       rate: 'img/stars.png',
