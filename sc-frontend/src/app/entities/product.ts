@@ -1,10 +1,7 @@
-export class Product {
-
-    id: string;
-    rate: string;
+export interface Product {
+    id: number;
     imageUrl: string;
     price: number;
     name: string;
     description: string;
-
 }

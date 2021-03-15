@@ -9,14 +9,20 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  public products: Product[] = [];
+  products: Product[] = [];
 
   constructor(
     private productService: ProductService
   ) { }
 
   ngOnInit() {
-    this.products = this.productService.findAll();
+    this.productService.findAll().subscribe(resp => {
+      if (resp.body !== null) {
+        for (const data of resp.body) {
+          this.products.push(data);
+        }
+      }
+    });
   }
 
 }
