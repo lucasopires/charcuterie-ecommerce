@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/api/v1")
 public class ProductController {
 
     private final Logger log = LoggerFactory.getLogger(ProductController.class);
-    private ProductService service;
+    private final ProductService service;
 
     @Autowired
     public ProductController(ProductService service) {
