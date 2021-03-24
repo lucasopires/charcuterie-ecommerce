@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Item } from 'src/app/entities/item';
 import { Product } from 'src/app/entities/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -18,11 +19,22 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.productService.findAll().subscribe(resp => {
       if (resp.body !== null) {
-        for (const data of resp.body) {
-          this.products.push(data);
+        for (const product of resp.body) {
+          this.products.push(product);
         }
       }
     });
+  }
+
+  // @Input() product: Product;
+  // @Output() productAdded = new EventEmitter();
+  addProductToCart(product) {
+    var cartItem: Item = new Item();
+    //this.cartService.createCartItem
+    //get cart from local storage 
+    
+    console.log(product);
+    //this.productAdded.emit(product);
   }
 
 }

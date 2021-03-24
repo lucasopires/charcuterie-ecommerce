@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  private REST_API_SERVER = "http://localhost:8080/api/v1/products";
-  private products: Product[] = [];
+  private REST_API_SERVER = "http://localhost:8080/api/v1/product";
 
   constructor(private http: HttpClient) { }
 
@@ -19,12 +18,4 @@ export class ProductService {
       { observe: 'response' });
   }
 
-
-  // findAll(): Product[] {
-  //   this.http.get<Product[]>('http://localhost:8080/api/v1/products/').subscribe(data => {
-  //     console.log(data);
-  //     this.products = data;
-  //   })
-  //   return this.products;
-  // }
 }

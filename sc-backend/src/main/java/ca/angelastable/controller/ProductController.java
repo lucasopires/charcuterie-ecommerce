@@ -23,11 +23,9 @@ public class ProductController {
         this.service = service;
     }
 
-    @GetMapping("/products")
+    @GetMapping("/product")
     public List<Product> findAll() {
-        if (log.isDebugEnabled()) {
-            log.debug("REST request to get all stock products");
-        }
+        log.info("REST request to get all products");
         return service.findAll();
     }
 }
