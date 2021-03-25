@@ -4,11 +4,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.Objects;
 
 @Entity
 @Table(name = "product")
-public class Product implements Serializable {
+public class Product extends AbstractAuditingEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +23,16 @@ public class Product implements Serializable {
     @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "price")
+    @NotNull
+    @Column(name = "price", precision = 21, scale = 2, nullable = false)
     private BigDecimal price;
 
     @Column(name = "description")
     private String description;
+
+    @NotNull
+    @Column(name = "created_at", nullable = false)
+    private Instant createdAt;
 
     public Long getId() {
         return id;
@@ -68,6 +74,14 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,6 +103,7 @@ public class Product implements Serializable {
                 ", imageUrl='" + imageUrl + '\'' +
                 ", price=" + price +
                 ", description='" + description + '\'' +
+                ", createdAt=" + createdAt +
                 '}';
     }
 }
