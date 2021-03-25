@@ -1,1 +1,1 @@
-# shopping-cart-solution
+# charcuterie-ecommerce
