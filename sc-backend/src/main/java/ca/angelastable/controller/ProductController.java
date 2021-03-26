@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/products")
 public class ProductController {
 
     private final Logger log = LoggerFactory.getLogger(ProductController.class);
@@ -23,7 +23,7 @@ public class ProductController {
         this.service = service;
     }
 
-    @GetMapping("/product")
+    @GetMapping
     public List<Product> findAll() {
         log.info("REST request to get all products");
         return service.findAll();
