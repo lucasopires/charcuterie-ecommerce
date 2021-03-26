@@ -20,8 +20,8 @@ public class Cart implements Serializable {
     private List<CartItem> items;
 
     @NotNull
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Instant createdAt = Instant.now();;
 
     public Long getId() {
         return id;

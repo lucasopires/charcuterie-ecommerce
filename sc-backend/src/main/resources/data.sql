@@ -4,10 +4,9 @@ INSERT INTO product (
         price,
         image_url,
         created_by,
-        created_date,
+        created_at,
         last_modified_by,
-        last_modified_date,
-        created_at
+        last_modified_at
     )
 VALUES (
         'Camilas Board',
@@ -17,7 +16,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -28,7 +26,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -39,7 +36,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -50,7 +46,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -61,7 +56,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -72,7 +66,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -83,7 +76,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -94,7 +86,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -105,7 +96,6 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     ),
     (
@@ -116,6 +106,5 @@ VALUES (
         'system',
         CURRENT_TIMESTAMP(),
         'system',
-        CURRENT_TIMESTAMP(),
         CURRENT_TIMESTAMP()
     );

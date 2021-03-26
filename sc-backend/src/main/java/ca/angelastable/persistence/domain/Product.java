@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.Objects;
 
 @Entity
@@ -29,10 +28,6 @@ public class Product extends AbstractAuditingEntity implements Serializable {
 
     @Column(name = "description")
     private String description;
-
-    @NotNull
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
 
     public Long getId() {
         return id;
@@ -74,14 +69,6 @@ public class Product extends AbstractAuditingEntity implements Serializable {
         this.description = description;
     }
 
-    public Instant getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Instant createdAt) {
-        this.createdAt = createdAt;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -103,7 +90,6 @@ public class Product extends AbstractAuditingEntity implements Serializable {
                 ", imageUrl='" + imageUrl + '\'' +
                 ", price=" + price +
                 ", description='" + description + '\'' +
-                ", createdAt=" + createdAt +
                 '}';
     }
 }
