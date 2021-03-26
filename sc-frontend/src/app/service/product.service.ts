@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  private REST_API_SERVER = "http://localhost:8080/api/v1/products";
+  private PRODUCTS_API = "http://localhost:8080/api/v1/products";
 
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<HttpResponse<Product[]>> {
     return this.http.get<Product[]>(
-      this.REST_API_SERVER, 
+      this.PRODUCTS_API, 
       { observe: 'response' });
   }
 

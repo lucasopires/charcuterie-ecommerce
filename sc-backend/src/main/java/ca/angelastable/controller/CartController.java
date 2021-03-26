@@ -23,15 +23,22 @@ public class CartController {
         this.service = service;
     }
 
+    @PostMapping("/:cartId/items")
+    public Cart createItem() {
+        return null;
+    }
+
     /**
      * Creates an empty shopping cart
      *
      * @return Cart
      */
-    @PostMapping("/")
+    @PostMapping
     //public ResponseEntity<Cart> create() {
     public Cart create() {
         log.info("REST request to create shopping cart");
+        //TODO implement status
+        //"state": "Incomplete",
         return service.save(new Cart());
     }
 
